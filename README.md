@@ -42,13 +42,20 @@ To train the system, we are working with sample **FAQ data** representing common
 
 ### **Model Workflow**
 
-#### Data Preprocessing: The input text is cleaned by removing punctuation, converting to lowercase, and eliminating numbers. This prepares the text for vectorization.
-#### Text Vectorization: The text is transformed into numerical sequences using a TextVectorization layer, which converts words into integers based on a fixed vocabulary size.
-#### Embedding Layer: The numerical sequences are passed through an embedding layer, which maps each integer to a dense vector representation, capturing semantic meanings.
-#### LSTM Layer: The embedding output is fed into an LSTM layer, which processes the sequences to learn contextual information over time.
-#### Dense Layers: The LSTM output is then passed through fully connected (Dense) layers to extract features and make predictions.
-#### Output Layer: A final Dense layer with a softmax activation outputs probabilities for each category. The highest probability indicates the predicted category.
-#### API Workflow: The FastAPI app processes incoming text queries, cleans them, converts them to tensors, and uses the trained model to predict the category, returning the result.
+#### Data Preprocessing: 
+The input text is cleaned by removing punctuation, converting to lowercase, and eliminating numbers. This prepares the text for vectorization.
+#### Text Vectorization: 
+The text is transformed into numerical sequences using a TextVectorization layer, which converts words into integers based on a fixed vocabulary size.
+#### Embedding Layer: 
+The numerical sequences are passed through an embedding layer, which maps each integer to a dense vector representation, capturing semantic meanings.
+#### LSTM Layer: 
+The embedding output is fed into an LSTM layer, which processes the sequences to learn contextual information over time.
+#### Dense Layers: 
+The LSTM output is then passed through fully connected (Dense) layers to extract features and make predictions.
+#### Output Layer: 
+A final Dense layer with a softmax activation outputs probabilities for each category. The highest probability indicates the predicted category.
+#### API Workflow: 
+The FastAPI app processes incoming text queries, cleans them, converts them to tensors, and uses the trained model to predict the category, returning the result.
 
 ### **Contributing**
 Feel free to contribute to this project by opening an issue or submitting a pull request.
